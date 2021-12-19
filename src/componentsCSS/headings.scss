@@ -1,0 +1,58 @@
+/*Used for the heading throughout the program*/
+@charset "UTF-8";
+
+@import url('https://rsms.me/inter/inter-ui.css');
+
+body {
+    font-family: 'Inter UI', sans-serif;
+}
+
+.h1Style {
+    font-size: 200%;
+    font-weight : 820;
+}
+
+.h2StyleBold {
+    font-size : 150%;
+    font-weight : 800;
+}
+
+.h2Style{
+    font-size: 150%;
+    font-weight : 600;
+}
+
+.h2StyleRed{
+    font-size: 150%;
+    font-weight : 600;
+    color : red;
+}
+
+.h2StyleB {
+    font-size: 120%;
+    font-weight : 800;
+}
+
+.h2Style2 {
+    font-size : 165%;
+    font-weight : 750;
+}
+
+.h2Style3 {
+    font-size : 125%;
+    font-weight : 500;
+}
+
+.h2Style4 {
+    font-size : 100%;
+    font-weight : 500;
+}
+
+.h3Style{
+    font-size : 55%;
+    font-weight : 400;
+}
+
+.tableRowStyle {
+    cursor : pointer;
+}

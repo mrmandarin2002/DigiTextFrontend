@@ -1,0 +1,19 @@
+
+
+
+body{
+    /* background-color : #fdf0ff !important; */
+    /* background:linear-gradient(#ffe4f0, transparent); */
+    background:linear-gradient(#ebf0fd,#fff6fc)!important; 
+    height : 100vh !important;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Fucking code from jesus himself god knows wtf this does */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-around;
+}

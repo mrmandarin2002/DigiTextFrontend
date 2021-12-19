@@ -1,0 +1,8 @@
+@charset "UTF-8";
+@import url('https://rsms.me/inter/inter-ui.css');
+
+.title{
+    font-family: 'Inter UI', sans-serif;
+    font-size : 275%;
+    font-weight : 900;
+}

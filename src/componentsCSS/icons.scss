@@ -1,0 +1,17 @@
+
+.icon {
+    border-radius : 10px;
+    width : 50px;
+    height : 50px;
+    cursor: pointer;
+}
+
+.icon:hover {
+    transform: rotate(-5deg);
+}
+
+.help-icon {
+    width : 40px;
+    height : 40px;
+    cursor : pointer;
+}
