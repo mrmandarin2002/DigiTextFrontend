@@ -24,7 +24,7 @@ import {Helmet} from 'react-helmet'
 import { Container, Row, Col} from 'react-bootstrap';
 import '../componentsCSS/headings.scss'
 
-const debugMode = False
+const debugMode = false
 
 const IP_ADDRESS = debugMode ? "192.168.100.109" : "api.digitext.tech"
 const PORT = debugMode ? 5000 : -1 
