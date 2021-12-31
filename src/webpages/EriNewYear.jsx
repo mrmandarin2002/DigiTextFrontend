@@ -6,21 +6,14 @@ import TemplateWebpage from './TemplateWebpage'
 
 import { Container, Row} from 'react-bootstrap';
 
-class DatabaseManagement extends TemplateWebpage {
+class EriNewYear extends TemplateWebpage {
     
     render(){
         return(
-            <div>
-                <Container fluid>
-                {this.renderTitle("Database Management")}
-                <Row>
-                    
-                </Row>
-                {this.renderBackButton()}
-                </Container>
+            <div>                    
             </div>
         )
     }
 }
  
-export default DatabaseManagement;
+export default EriNewYear;

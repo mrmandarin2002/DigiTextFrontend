@@ -31,7 +31,13 @@ class Menu extends TemplateWebpage {
     this.adminButtons.push({pageName : "Add & Delete Textbooks", link : "/addtextbooks", permLevel : 1});
     this.adminButtons.push({pageName : "Textbook Management", link : "/textbookmanagement", permLevel : 1});
     this.adminButtons.push({pageName : "Barcode & Invoice Printer", link : "/printer", permLevel : 1})
-    this.adminButtons.push({pageName : "Statistics", link : "/stats", permLevel : 1});
+    //the things you do for your GF
+    if(this.props.controller.state.loginInfo.username == "Eri"){
+      this.adminButtons.push({pageName : "Statistics", link : "/happynewyeareri", permLevel : 1})
+    } else{
+      this.adminButtons.push({pageName : "Statistics", link : "/stats", permLevel : 1});
+    }
+    console.log(this.adminButtons)
     this.superAdminButtons = [];
     this.superAdminButtons.push({pageName : "Database Management", link : "/databasemanagement", permLevel : 0})
     this.superAdminButtons.push({pageName : "Admin Management", link : "/adminmanagement", permLevel : 0})

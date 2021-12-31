@@ -5,8 +5,6 @@ import '../componentsCSS/headings.scss'
 
 import TemplateWebpage from './TemplateWebpage'
 
-import LinkButton from '../components/linkButton'
-import MainTitle from '../components/mainTitle'
 import BootstrapTable from 'react-bootstrap-table-next';
 import { Container, Row, Col, Form, Button} from 'react-bootstrap';
 

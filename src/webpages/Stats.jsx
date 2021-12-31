@@ -8,6 +8,7 @@ import {timeConversion} from '../conversions'
 
 const headerColor = 'black'
 const headerTextColor = 'white'
+const statsRefreshRate = 10000 //in ms
 
 
 class Stats extends TemplateWebpage {
@@ -38,7 +39,7 @@ class Stats extends TemplateWebpage {
         //disgusting way of using state but whatever
         if(this.props.controller.state.getStats){
             this.props.controller.api.getStats(this.state.numberOfTransactions, this.setStats)
-            setTimeout(this.getStats, 2000)
+            setTimeout(this.getStats, statsRefreshRate)
         }
     }
 

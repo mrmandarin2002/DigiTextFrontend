@@ -1,0 +1,4 @@
+Host 35.171.50.193
+  HostName 35.171.50.193
+  User ubuntu
+  IdentityFile C:\Users\Derek Ma\Documents\GitHub\DigiText_frontend\digitextSSH

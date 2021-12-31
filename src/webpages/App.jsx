@@ -9,6 +9,7 @@ import TeacherAssignment from './TeacherAssignment'
 import TextbookManagement from './TextbookManagement'
 import DatabaseManagement from './DatabaseManagement'
 import AdminManagement from './AdminManagement'
+import EriNewYear from './EriNewYear'
 import Printer from './Printer'
 import {abstractTextbookSearch, permLevel} from '../conversions'
 import scanner from '../barcodeInteraction'
@@ -23,12 +24,12 @@ import {Helmet} from 'react-helmet'
 import { Container, Row, Col} from 'react-bootstrap';
 import '../componentsCSS/headings.scss'
 
-const debugMode = false
+const debugMode = true
 
-const IP_ADDRESS = debugMode ? "192.168.0.16" : "api.digitext.tech"
+const IP_ADDRESS = debugMode ? "192.168.100.109" : "api.digitext.tech"
 const PORT = debugMode ? 5000 : -1 
-const USERNAME = debugMode ? "mrmandarin" : ""
-const PASSWORD = debugMode ? "alyjennyyanfei" : ""
+const USERNAME = debugMode ? "" : ""
+const PASSWORD = debugMode ? "" : ""
 
 class App extends Component {
   //stores which page is currently active so that the scanner class can interact with each class
@@ -77,6 +78,7 @@ class App extends Component {
       {link : "/login", component : Login},
       {link : "/printer", component : Printer},
       {link : "/databasemanagement", component : DatabaseManagement},
+      {link : "/happynewyeareri", component : EriNewYear},
       {link : "/", component : Login} 
     ]
     this.api = new interactions(IP_ADDRESS, PORT, this)
@@ -223,12 +225,13 @@ class App extends Component {
       console.log("LOGIN FAILED!")
     } else {
       console.log("LOGGED IN!")
+      console.log(this.state.loginInfo)
       this.setState({
         loginInfo : {
+          username : this.state.loginInfo.username,
           loggedIn : true,
-          username : "",
           password : "",
-          token : token.access_token,
+          token : token.access_token
         },
         userSchoolCode : token.school_code,
         userType : token.role,
