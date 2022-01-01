@@ -70,6 +70,8 @@ class EriNewYear extends TemplateWebpage {
                     </Row>
                     <Row className = "mt-3">
                         <Col className = 'text-center'>
+                            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css" />
+                            <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet" />
                             <button type="button" class="simple" onClick = {(e) => {this.increaseCringe(e)}}>{this.state.cringeOverload ? "Reset Cringe" : "Cringe"}</button>
                             
                         </Col>
