@@ -82,7 +82,9 @@ class App extends Component {
       {link : "/", component : Login} 
     ]
     this.api = new interactions(IP_ADDRESS, PORT, this)
-    this.api.login(this.state.loginInfo.username, this.state.loginInfo.password)
+    if(this.state.loginInfo.username && this.state.loginInfo.password){
+      this.api.login(this.state.loginInfo.username, this.state.loginInfo.password)
+    }
     this.scanner = new scanner(this.api, this)
     this.notificationNumber = 0
   }
@@ -309,12 +311,12 @@ class App extends Component {
       if(debugMode){
         return(
           <div>
-            <Row style = {{position: "absolute", bottom: "21px", right : "15px"}}>
+            <Row style = {{position: "absolute", bottom: "31px", right : "15px"}}>
               <Col>
                 <h3 className = "h3Style">{"Window Height: " + this.state.windowHeight}</h3>
               </Col>
             </Row>
-            <Row style = {{position: "absolute", bottom: "31px", right : "15px"}}>
+            <Row style = {{position: "absolute", bottom: "41px", right : "15px"}}>
               <Col>
                 <h3 className = "h3Style">{"Window Width: " + this.state.windowWidth}</h3>
               </Col>
@@ -343,14 +345,19 @@ class App extends Component {
             }
             <Route path = "/">
               <Container className = "p-0">
-                <Row style = {{position: "absolute", bottom: "11px", right : "15px"}}>
+                <Row style = {{position: "absolute", bottom: "21px", right : "15px"}}>
                   <Col>
                     <h3 className = "h3Style">{this.state.userSchoolCode ? "School: " + this.state.userSchoolCode : ""}</h3>
                   </Col>
                 </Row>
-                <Row style = {{position: "absolute", bottom: "1px", right : "15px"}}>
+                <Row style = {{position: "absolute", bottom: "11px", right : "15px"}}>
                   <Col>
                     <h3 className = "h3Style">{this.state.userType ? "User Type: " + this.state.userType : ""}</h3>
+                  </Col>
+                </Row>
+                <Row style = {{position: "absolute", bottom: "1px", right : "15px"}}>
+                  <Col>
+                    <h3 className = "h3Style">{"Developed by Derek Ma"}</h3>
                   </Col>
                 </Row>
                 {renderWindowDimensions()}

@@ -54,7 +54,7 @@ class AdminManagement extends TemplateWebpage {
         }
 
         const renderDeleteButton = () => {
-            if(this.state.selectedRow.username){
+            if(this.state.selectedRow.school_code){
                 return <Button onClick = {this.deleteUser}> Delete User </Button>
             } 
         }

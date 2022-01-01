@@ -17,12 +17,13 @@ class Login extends TemplateWebpage {
 
     submitForm = (e) => {
         e.preventDefault(); // stack overflow to the rescue once again....
-        this.props.controller.setState({loginInfo : {username : this.state.username}})
-        this.props.controller.api.login(this.state.username, this.state.password)
+        if(this.state.username){
+            this.props.controller.setState({loginInfo : {username : this.state.username}})
+            this.props.controller.api.login(this.state.username, this.state.password)
+        }
     }
 
     render() { 
-
         const renderAlerts = () => {
             if(this.props.controller.state.loginInfo.loginFailed){
                 if(!this.state.username && !this.state.password){

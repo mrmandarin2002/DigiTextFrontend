@@ -1,16 +1,31 @@
-import './Background.css' //unfortunately all webpages have to important this to change the background color
-import '../webpagesCSS/infoCSS.scss'
-import '../componentsCSS/headings.scss'
+import '../componentsCSS/eri.scss'
 
 import TemplateWebpage from './TemplateWebpage'
 
-import { Container, Row} from 'react-bootstrap';
+import Countdown from '../components/countdown'
+
+import { Container, Row, Col} from 'react-bootstrap';
 
 class EriNewYear extends TemplateWebpage {
     
     render(){
+        const currentDate = new Date();
+        const year = (currentDate.getMonth() === 11 && currentDate.getDate() > 23) ? currentDate.getFullYear() + 1 : currentDate.getFullYear();
+        console.log("CurrentDate: ", currentDate)
+        console.log("YEAR: ", year)
         return(
-            <div>                    
+            <div>
+                <Container>
+                    <Row>
+                        <Col className = 'text-center'>
+                            <text className = "EriTitle"> How long I've had a GF: </text>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Countdown date={`${currentDate.getFullYear()}-08-28T22:00:00`}/>
+                    </Row>
+                </Container>
+                {this.renderBackButton()}
             </div>
         )
     }
