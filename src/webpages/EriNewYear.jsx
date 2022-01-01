@@ -53,7 +53,7 @@ class EriNewYear extends TemplateWebpage {
 
         return(
             <div>
-                <img style = {{position : 'absolute', top : "5%", left : "0%", opacity : this.state.opacity}} className = "eriImg" src = {this.state.cringeOverload ? cuteEri : eri} alt = "Eri" height = {this.props.controller.state.windowHeight} width = {this.props.controller.state.windowWidth}/>
+                <img style = {{position : 'absolute', top : "0%", left : "0%", opacity : this.state.opacity}} className = "eriImg" src = {this.state.cringeOverload ? cuteEri : eri} alt = "Eri" height = {this.props.controller.state.windowHeight} width = {this.props.controller.state.windowWidth}/>
                 <Container>
                     <Row>
                         <Col className = 'text-center'>
