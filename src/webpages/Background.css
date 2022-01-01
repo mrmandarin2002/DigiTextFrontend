@@ -3,8 +3,8 @@ body{
     /* background:linear-gradient(#ffe4f0, transparent); */
     background:linear-gradient(#ebf0fd,#fff6fc)!important; 
     height : 100vh !important;
-    display: flex;
-    flex-direction: column;
+    display: flex !important;
+    flex-direction: column !important;
 }
 
 /* Code from jesus himself god knows wtf this does */
