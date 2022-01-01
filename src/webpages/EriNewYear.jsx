@@ -61,7 +61,7 @@ class EriNewYear extends TemplateWebpage {
                         </Col>
                     </Row>
                     <Row>
-                        <Countdown date={`${currentDate.getFullYear()}-08-28T22:00:00`}/>
+                        <Countdown date={`2021-08-28T22:00:00`}/>
                     </Row>
                     <Row>
                         <Col className = 'text-center'>
