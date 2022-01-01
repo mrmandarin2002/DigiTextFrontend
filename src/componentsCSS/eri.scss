@@ -5,11 +5,51 @@ body {
     padding: 0;
     font-family: 'Lato', sans-serif;
     text-align: center;
+    opacity : 1;
   }
 
   .EriTitle{
-    padding-top: 10%;
-    font-size: 50px;
+    padding-top: 5%;
+    font-size: 60px;
     display: inline-block;
     font-family: 'Lato', sans-serif;
   }
+
+  .EriCute{
+      font-size: 35px;
+      font-family: 'Lato', sans-serif;
+  }
+
+button {
+    margin: 50px;
+    font-family: inherit;
+  }
+  /* End of Page styling */
+  
+  /* Simple button styling -- No animation */
+  .simple {
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 50px 13px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  
+  .simple::after {
+    content: "";
+    background-color: #dcbaff;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+  }
+
+.eriImg{
+    opacity : 0.5;
+}
