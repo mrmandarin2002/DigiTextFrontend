@@ -26,7 +26,7 @@ import scanner from '../barcodeInteraction'
 
 const debugMode = false
 
-const IP_ADDRESS = debugMode ? "192.168.100.109" : "35.171.50.193"
+const IP_ADDRESS = debugMode ? "192.168.100.109" : "api.digitext.ca"
 const PORT = debugMode ? 5000 : -1 
 const USERNAME = debugMode ? "" : ""
 const PASSWORD = debugMode ? "" : ""
