@@ -1,32 +1,32 @@
+import '../componentsCSS/headings.scss'
+
+import { Col, Container, Row } from 'react-bootstrap';
+import {Redirect, Route, BrowserRouter as Router} from 'react-router-dom';
+import {abstractTextbookSearch, permLevel} from '../conversions'
+
+import AdminManagement from './AdminManagement'
+import { Component } from 'react'
+import DatabaseManagement from './DatabaseManagement'
+import EriNewYear from './EriNewYear'
+import {Helmet} from 'react-helmet'
 //Controls which page is currently active
 import Info from './Info'
 import Login from './Login'
 import Menu from './Menu'
-import Stats from './Stats'
-import TextbookDistribution from './TextbookDistribution'
-import TextbookScanner from './TextbookScanner'
-import TeacherAssignment from './TeacherAssignment'
-import TextbookManagement from './TextbookManagement'
-import DatabaseManagement from './DatabaseManagement'
-import AdminManagement from './AdminManagement'
-import EriNewYear from './EriNewYear'
-import Printer from './Printer'
-import {abstractTextbookSearch, permLevel} from '../conversions'
-import scanner from '../barcodeInteraction'
-import interactions from '../interactions'
-
 //components
 import Notification from '../components/notification'
-
-import {BrowserRouter as Router, Route, Redirect} from 'react-router-dom';
-import { Component } from 'react'
-import {Helmet} from 'react-helmet'
-import { Container, Row, Col} from 'react-bootstrap';
-import '../componentsCSS/headings.scss'
+import Printer from './Printer'
+import Stats from './Stats'
+import TeacherAssignment from './TeacherAssignment'
+import TextbookDistribution from './TextbookDistribution'
+import TextbookManagement from './TextbookManagement'
+import TextbookScanner from './TextbookScanner'
+import interactions from '../interactions'
+import scanner from '../barcodeInteraction'
 
 const debugMode = false
 
-const IP_ADDRESS = debugMode ? "192.168.100.109" : "api.digitext.tech"
+const IP_ADDRESS = debugMode ? "192.168.100.109" : "api.digitext.ca"
 const PORT = debugMode ? 5000 : -1 
 const USERNAME = debugMode ? "" : ""
 const PASSWORD = debugMode ? "" : ""
