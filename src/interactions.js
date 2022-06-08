@@ -90,7 +90,9 @@ class interactions{
             mode : "cors",
             method : "POST",
             headers : new Headers({
-                'Content-Type': 'application/json'
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Credentials': 'true'
             }),
             body : JSON.stringify(data)
         })
