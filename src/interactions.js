@@ -87,12 +87,10 @@ class interactions{
 
     async postDataLogin(endpoint, data = {}, callBackFunc){
         const response = await fetch(this.ADDRESS + endpoint, {
-            mode : "cors",
+            mode : "no-cors",
             method : "POST",
             headers : new Headers({
-                'Accept': 'application/json',
                 'Content-Type': 'application/json',
-                'Access-Control-Allow-Credentials': 'true'
             }),
             body : JSON.stringify(data)
         })
